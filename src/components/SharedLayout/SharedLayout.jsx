@@ -1,20 +1,22 @@
 import { Suspense } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import { GlobalStyle } from "@/styles/GlobalStyle";
+import { Header } from "@/components/Header/Header";
+
+import { Container, Main } from "./SharedLayout.styled";
 
 export const SharedLayout = () => {
   return (
-    <>
+    <Container>
       <GlobalStyle />
-      <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Catalog</NavLink>
-        <NavLink to="/favorites"> Favorites</NavLink>
-      </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
-    </>
+
+      <Header />
+      <Main>
+        <Suspense>
+          <Outlet />
+        </Suspense>
+      </Main>
+    </Container>
   );
 };
