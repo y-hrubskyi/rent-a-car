@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectAdverts } from "@/store/adverts/selectors";
 
@@ -12,9 +13,7 @@ const CatalogPage = () => {
     dispatch(fetchAdverts());
   }, [dispatch]);
 
-  console.log(data);
-
-  return <h2 style={{ textAlign: "center" }}>Catalog Page</h2>;
+  return data && <AdvertsList adverts={data} />;
 };
 
 export default CatalogPage;
