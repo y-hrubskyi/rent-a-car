@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import PlaceholderImg from "@/assets/img/empty-placeholder.png";
 
 export const PlaceholderWrapper = styled.div`
   display: flex;
   justify-content: center;
   height: 480px;
-  background: url("/src/assets/img/empty-placeholder.png") no-repeat center;
+  background: url(${PlaceholderImg}) no-repeat center;
 `;
 
 export const PlaceholderText = styled.p`
