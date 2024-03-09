@@ -1,3 +1,4 @@
+import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
 import {
   AboutCar,
   AccentText,
@@ -13,6 +14,7 @@ import {
   LearnMoreBtn,
   MainInfo,
 } from "./AdvertsItem.styled";
+import { useModal } from "@/hooks/useModal";
 
 export const AdvertsItem = ({
   advert,
@@ -20,6 +22,7 @@ export const AdvertsItem = ({
   onAddFavorite,
   onRemoveFavorite,
 }) => {
+  const { isOpen, toggleModal } = useModal();
   const {
     id,
     year,
@@ -69,7 +72,8 @@ export const AdvertsItem = ({
         </MainInfo>
         <DetailsList>{detailsList}</DetailsList>
       </CardInfo>
-      <LearnMoreBtn>Learn More</LearnMoreBtn>
+      <LearnMoreBtn onClick={toggleModal}>Learn More</LearnMoreBtn>
+      {isOpen && <AdvertModal onClose={toggleModal} advert={advert} />}
     </Card>
   );
 };
