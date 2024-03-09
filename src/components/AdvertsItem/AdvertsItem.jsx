@@ -6,13 +6,20 @@ import {
   Detail,
   DetailsItem,
   DetailsList,
+  HeartBtn,
+  HeartIcon,
   Img,
   ImgWrapper,
   LearnMoreBtn,
   MainInfo,
 } from "./AdvertsItem.styled";
 
-export const AdvertsItem = ({ advert }) => {
+export const AdvertsItem = ({
+  advert,
+  isFavorite,
+  onAddFavorite,
+  onRemoveFavorite,
+}) => {
   const {
     id,
     year,
@@ -26,6 +33,11 @@ export const AdvertsItem = ({ advert }) => {
     accessories,
     functionalities,
   } = advert;
+
+  const handleClick = () => {
+    if (isFavorite) return onRemoveFavorite();
+    onAddFavorite();
+  };
 
   const [country, city] = address.split(", ").reverse();
   const feature = [...accessories, ...functionalities].reduce(
@@ -44,6 +56,9 @@ export const AdvertsItem = ({ advert }) => {
     <Card>
       <ImgWrapper>
         <Img src={img} alt={`${make} ${model}`} />
+        <HeartBtn type="button" onClick={handleClick}>
+          <HeartIcon isfavorite={isFavorite ? " " : ""} />
+        </HeartBtn>
       </ImgWrapper>
       <CardInfo>
         <MainInfo>

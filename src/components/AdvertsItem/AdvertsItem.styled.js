@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HeartSVG from "@/assets/icons/heart.svg?react";
 
 export const Card = styled.li`
   width: 274px;
@@ -30,6 +31,29 @@ export const ImgWrapper = styled.div`
     );
     z-index: 1;
   }
+`;
+
+export const HeartBtn = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 18px;
+  height: 18px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+`;
+
+export const HeartIcon = styled(HeartSVG)`
+  width: 18px;
+  height: 18px;
+
+  stroke: ${(p) =>
+    p.isfavorite ? p.theme.colors.accent : "rgba(255, 255, 255, 0.8)"};
+  fill: ${(p) => (p.isfavorite ? p.theme.colors.accent : "none")};
 `;
 
 export const Img = styled.img`
