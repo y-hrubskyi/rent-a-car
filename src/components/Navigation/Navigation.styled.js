@@ -21,7 +21,7 @@ export const StyledLink = styled(NavLink)`
 
   font-weight: 600;
   text-align: center;
-  color: ${(p) => p.theme.colors.black};
+  color: ${(p) => p.theme.colors.dark()};
   text-decoration: none;
   border-radius: ${(p) => p.theme.radii.btn};
 

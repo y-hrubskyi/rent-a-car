@@ -70,6 +70,7 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  a,
   button {
     cursor: pointer;
   }
