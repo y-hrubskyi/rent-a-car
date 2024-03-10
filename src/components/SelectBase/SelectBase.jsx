@@ -27,7 +27,6 @@ export const SelectBase = ({
       options={options}
       placeholder={placeholder}
       onChange={({ value }) => onChange(value)}
-      defaultMenuIsOpen
     />
   );
 };
