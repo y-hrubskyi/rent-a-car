@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { SelectBase } from "@/components/SelectBase/SelectBase";
 import { Form, FormGroup, SubmitBtn } from "./SearchBar.styled";
@@ -13,7 +13,10 @@ export const SearchBar = ({ onSubmit }) => {
     onSubmit({ make });
   };
 
-  const makeOptions = makes.map((make) => ({ value: make, label: make }));
+  const makeOptions = useMemo(
+    () => makes.map((make) => ({ value: make, label: make })),
+    []
+  );
 
   return (
     <Form onSubmit={handleSubmit}>

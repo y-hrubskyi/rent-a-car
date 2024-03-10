@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { SearchBar } from "@/components/SearchBar/SearchBar";
+import { SearchBar } from "./SearchBar/SearchBar";
 import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectIsLoading } from "@/store/adverts/selectors";
