@@ -1,5 +1,7 @@
 import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
 import { useModal } from "@/hooks/useModal";
+import { splitAddress } from "@/utils/splitAddress";
+import { getMinLengthFeature } from "@/utils/getMinLengthFeature";
 import * as SC from "./AdvertsItem.styled";
 
 export const AdvertsItem = ({
@@ -28,11 +30,8 @@ export const AdvertsItem = ({
     onAddFavorite();
   };
 
-  const [country, city] = address.split(", ").reverse();
-  const feature = [...accessories, ...functionalities].reduce(
-    (min, current) => (current.length < min.length ? current : min),
-    accessories[0]
-  );
+  const [country, city] = splitAddress(address);
+  const feature = getMinLengthFeature(accessories, functionalities);
 
   const details = [city, country, rentalCompany, type, make, id, feature];
   const detailsList = details.map((detail) => (
