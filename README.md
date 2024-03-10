@@ -51,6 +51,7 @@ rent-a-car/
 |   |-- services/        # Services for handling API calls, etc.
 |   |-- store/           # Redux store configuration, actions, reducers, etc.
 |   |-- styles/          # Global and component-specific styles
+|   |-- utils/           # General utility functions and helper modules
 |   |-- App.jsx          # Main App component
 |   |-- main.jsx         # Entry point for rendering the React app
 |-- package.json         # Project configuration and dependencies
