@@ -14,15 +14,17 @@ export const SearchBar = ({ onSubmit }) => {
     onSubmit({ make, rentalPrice });
   };
 
-  const makeOptions = useMemo(
+  const makesOptions = useMemo(
     () => makes.map((make) => ({ value: make, label: make })),
     []
   );
-
-  const priceOptions = [];
-  for (let i = 30; i <= 500; i += 10) {
-    priceOptions.push({ value: i, label: i });
-  }
+  const priceOptions = useMemo(() => {
+    const options = [];
+    for (let i = 30; i <= 500; i += 10) {
+      options.push({ value: i, label: i });
+    }
+    return options;
+  }, []);
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -31,7 +33,7 @@ export const SearchBar = ({ onSubmit }) => {
         <SelectBase
           name="make"
           placeholder="Enter the text"
-          options={makeOptions}
+          options={makesOptions}
           menuHeight={272}
           controlWidth={224}
           onChange={setMake}
