@@ -1,4 +1,5 @@
 import { ModalBase } from "@/components/ModalBase/ModalBase";
+import { createConditionsDataArr, createDetailsDataArr } from "@/utils";
 import * as SC from "./AdvertModal.styled";
 
 export const AdvertModal = ({
@@ -21,16 +22,14 @@ export const AdvertModal = ({
     rentalPrice,
   },
 }) => {
-  const [country, city] = address.split(", ").reverse();
-  const details = [
-    city,
-    country,
-    `Id: ${id}`,
-    `Year: ${year}`,
-    `Type: ${type}`,
-    `Fuel Consumption: ${fuelConsumption}`,
-    `Engine Size: ${engineSize}`,
-  ];
+  const details = createDetailsDataArr({
+    id,
+    year,
+    type,
+    address,
+    fuelConsumption,
+    engineSize,
+  });
   const detailsList = details.map((detail) => (
     <SC.DetailsItem key={detail}>
       <SC.Detail>{detail}</SC.Detail>
@@ -43,18 +42,11 @@ export const AdvertModal = ({
     </SC.DetailsItem>
   ));
 
-  const formattedMileage = mileage.toLocaleString("en-US");
-  const [currencySymbol, ...amount] = rentalPrice;
-  const formattedPrice = amount.join("") + currencySymbol;
-  const additionalConditions = [
-    `Mileage: ${formattedMileage}`,
-    `Price: ${formattedPrice}`,
-  ];
-  const splittedConditions = rentalConditions
-    .split("\n")
-    .concat(additionalConditions)
-    .map((item) => item.split(":"));
-
+  const splittedConditions = createConditionsDataArr({
+    mileage,
+    rentalPrice,
+    rentalConditions,
+  });
   const conditionsList = splittedConditions.map(([condition, value]) => (
     <SC.ConditionItem key={condition}>
       <SC.Condition>
