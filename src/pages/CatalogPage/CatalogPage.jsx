@@ -6,6 +6,7 @@ import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
 import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectIsLoading } from "@/store/adverts/selectors";
+import { filterList } from "@/utils/filterList";
 import { LoadMoreBtn } from "./CatalogPage.styled";
 
 const CatalogPage = () => {
@@ -43,15 +44,7 @@ const CatalogPage = () => {
     setLoadMore(true);
   };
 
-  const filterList = (list) => {
-    if (!rentalPrice) return list;
-
-    return list.filter(
-      (item) => Number(item.rentalPrice.slice(1)) <= rentalPrice
-    );
-  };
-
-  const filteredList = filterList(totalItems);
+  const filteredList = filterList({ list: totalItems, price: rentalPrice });
   const noResult = filteredList.length === 0 && !loadMore;
 
   return (
