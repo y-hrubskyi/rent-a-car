@@ -12,6 +12,7 @@ const CatalogPage = () => {
   const [loadMore, setLoadMore] = useState(true);
   const [page, setPage] = useState(1);
   const [make, setMake] = useState("");
+  const [rentalPrice, setRentalPrice] = useState(null);
   const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
 
@@ -33,17 +34,28 @@ const CatalogPage = () => {
     setPage((prevPage) => prevPage + 1);
   };
 
-  const searchSubmit = ({ make }) => {
+  const searchSubmit = ({ make, rentalPrice }) => {
     setMake(`${make}/${Date.now()}`);
+    setRentalPrice(rentalPrice);
     setPage(1);
     setTotalItems([]);
     setLoadMore(true);
   };
 
+  const filterList = (list) => {
+    if (!rentalPrice) return list;
+
+    return list.filter(
+      (item) => Number(item.rentalPrice.slice(1)) <= rentalPrice
+    );
+  };
+
+  const filteredList = filterList(totalItems);
+
   return (
     <>
       <SearchBar onSubmit={searchSubmit} />
-      {totalItems.length > 0 && <AdvertsList adverts={totalItems} />}
+      {filteredList.length > 0 && <AdvertsList adverts={filteredList} />}
       {loadMore && (
         <LoadMoreBtn onClick={handleIncrementPage}>
           {isLoading ? "Loading..." : "Load more"}
