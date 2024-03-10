@@ -10,6 +10,7 @@ export default defineConfig({
       "@/": "/src",
       "@/assets": "/src/assets",
       "@/components": "/src/components",
+      "@/data": "/src/data",
       "@/hooks": "/src/hooks",
       "@/pages": "/src/pages",
       "@/services": "/src/services",
