@@ -1,6 +1,7 @@
 import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
 import { useModal } from "@/hooks/useModal";
 import * as SC from "./AdvertsItem.styled";
+import CarPlaceholder from "@/assets/img/car-placeholder.jpg";
 
 export const AdvertsItem = ({
   advert,
