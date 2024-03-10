@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { SearchBar } from "./SearchBar/SearchBar";
 import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
+import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectIsLoading } from "@/store/adverts/selectors";
 import { LoadMoreBtn } from "./CatalogPage.styled";
@@ -51,11 +52,17 @@ const CatalogPage = () => {
   };
 
   const filteredList = filterList(totalItems);
+  const noResult = filteredList.length === 0 && !loadMore;
 
   return (
     <>
       <SearchBar onSubmit={searchSubmit} />
       {filteredList.length > 0 && <AdvertsList adverts={filteredList} />}
+      {noResult && (
+        <Placeholder>
+          Sorry, no results found. Please try a different search query
+        </Placeholder>
+      )}
       {loadMore && (
         <LoadMoreBtn onClick={handleIncrementPage}>
           {isLoading ? "Loading..." : "Load more"}
