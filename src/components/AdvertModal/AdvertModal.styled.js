@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import CarPlaceholder from "@/assets/img/car-placeholder.jpg";
+
 export const ImgWrapper = styled.div`
   width: 100%;
   height: 248px;
@@ -11,7 +13,22 @@ export const ImgWrapper = styled.div`
 `;
 
 export const Img = styled.img`
+  position: relative;
   object-fit: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(${CarPlaceholder});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
 `;
 
 export const CardInfo = styled.div`

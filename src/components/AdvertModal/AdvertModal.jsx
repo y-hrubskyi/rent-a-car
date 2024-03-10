@@ -1,22 +1,6 @@
-import {
-  AboutCar,
-  AccentCondition,
-  AccentText,
-  CardInfo,
-  CardInfoSectionTitle,
-  Condition,
-  ConditionItem,
-  ConditionsList,
-  Description,
-  Detail,
-  DetailsItem,
-  DetailsList,
-  FeaturesList,
-  Img,
-  ImgWrapper,
-  RentalCarBtn,
-} from "./AdvertModal.styled";
 import { ModalBase } from "@/components/ModalBase/ModalBase";
+import { createConditionsDataArr, createDetailsDataArr } from "@/utils";
+import * as SC from "./AdvertModal.styled";
 
 export const AdvertModal = ({
   onClose,
@@ -38,75 +22,66 @@ export const AdvertModal = ({
     rentalPrice,
   },
 }) => {
-  const [country, city] = address.split(", ").reverse();
-  const details = [
-    city,
-    country,
-    `Id: ${id}`,
-    `Year: ${year}`,
-    `Type: ${type}`,
-    `Fuel Consumption: ${fuelConsumption}`,
-    `Engine Size: ${engineSize}`,
-  ];
+  const details = createDetailsDataArr({
+    id,
+    year,
+    type,
+    address,
+    fuelConsumption,
+    engineSize,
+  });
   const detailsList = details.map((detail) => (
-    <DetailsItem key={detail}>
-      <Detail>{detail}</Detail>
-    </DetailsItem>
+    <SC.DetailsItem key={detail}>
+      <SC.Detail>{detail}</SC.Detail>
+    </SC.DetailsItem>
   ));
 
   const featuresList = [...accessories, ...functionalities].map((feature) => (
-    <DetailsItem key={feature}>
-      <Detail>{feature}</Detail>
-    </DetailsItem>
+    <SC.DetailsItem key={feature}>
+      <SC.Detail>{feature}</SC.Detail>
+    </SC.DetailsItem>
   ));
 
-  const formattedMileage = mileage.toLocaleString("en-US");
-  const [currencySymbol, ...amount] = rentalPrice;
-  const formattedPrice = amount.join("") + currencySymbol;
-  const additionalConditions = [
-    `Mileage: ${formattedMileage}`,
-    `Price: ${formattedPrice}`,
-  ];
-  const splittedConditions = rentalConditions
-    .split("\n")
-    .concat(additionalConditions)
-    .map((item) => item.split(":"));
-
+  const splittedConditions = createConditionsDataArr({
+    mileage,
+    rentalPrice,
+    rentalConditions,
+  });
   const conditionsList = splittedConditions.map(([condition, value]) => (
-    <ConditionItem key={condition}>
-      <Condition>
+    <SC.ConditionItem key={condition}>
+      <SC.Condition>
         {condition}
         {value && ":"}
-        {value && <AccentCondition>{value}</AccentCondition>}
-      </Condition>
-    </ConditionItem>
+        {value && <SC.AccentCondition>{value}</SC.AccentCondition>}
+      </SC.Condition>
+    </SC.ConditionItem>
   ));
 
   return (
     <ModalBase onClose={onClose}>
-      <ImgWrapper>
-        <Img src={img} alt={`${make} ${model}`} />
-      </ImgWrapper>
-      <CardInfo>
+      <SC.ImgWrapper>
+        <SC.Img src={img} alt={`${make} ${model}`} />
+      </SC.ImgWrapper>
+      <SC.CardInfo>
         <div>
-          <AboutCar>
-            {make} <AccentText>{model}</AccentText>, {year}
-          </AboutCar>
-          <DetailsList>{detailsList}</DetailsList>
-          <Description>{description}</Description>
+          <SC.AboutCar>
+            {make} <SC.AccentText>{model}</SC.AccentText>, {year}
+          </SC.AboutCar>
+          <SC.DetailsList>{detailsList}</SC.DetailsList>
+          <SC.Description>{description}</SC.Description>
         </div>
         <div>
-          <CardInfoSectionTitle>
+          <SC.CardInfoSectionTitle>
             Accessories and functionalities:
-          </CardInfoSectionTitle>
-          <FeaturesList>{featuresList}</FeaturesList>
+          </SC.CardInfoSectionTitle>
+          <SC.FeaturesList>{featuresList}</SC.FeaturesList>
         </div>
         <div>
-          <CardInfoSectionTitle>Rental Conditions:</CardInfoSectionTitle>
-          <ConditionsList>{conditionsList}</ConditionsList>
+          <SC.CardInfoSectionTitle>Rental Conditions:</SC.CardInfoSectionTitle>
+          <SC.ConditionsList>{conditionsList}</SC.ConditionsList>
         </div>
-      </CardInfo>
-      <RentalCarBtn href="tel:+380730000000">Rental Car</RentalCarBtn>
+      </SC.CardInfo>
+      <SC.RentalCarBtn href="tel:+380730000000">Rental Car</SC.RentalCarBtn>
     </ModalBase>
   );
 };

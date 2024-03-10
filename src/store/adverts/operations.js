@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "@/services/axios";
 
 export const fetchAdverts = createAsyncThunk(
-  "adverts/fetchAll",
+  "adverts/fetchData",
   async (searchParams, thunkAPI) => {
     try {
       const { data } = await axios.get(`/adverts?${searchParams}`);
