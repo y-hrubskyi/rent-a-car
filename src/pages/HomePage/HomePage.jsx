@@ -1,5 +1,13 @@
+import { HeroSection } from "./HeroSection/HeroSection";
+import { FeatureSection } from "./FeatureSection/FeatureSection";
+
 const HomePage = () => {
-  return <h1 style={{ textAlign: "center" }}>Rent-a-car App</h1>;
+  return (
+    <>
+      <HeroSection />
+      <FeatureSection />
+    </>
+  );
 };
 
 export default HomePage;
