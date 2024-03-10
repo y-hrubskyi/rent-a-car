@@ -77,6 +77,6 @@ export const GlobalStyle = createGlobalStyle`
   
   img {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }`;

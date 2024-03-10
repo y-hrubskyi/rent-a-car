@@ -71,7 +71,6 @@ export const AdvertModal = ({
     .split("\n")
     .concat(additionalConditions)
     .map((item) => item.split(":"));
-  console.log(splittedConditions);
 
   const conditionsList = splittedConditions.map(([condition, value]) => (
     <ConditionItem key={condition}>
