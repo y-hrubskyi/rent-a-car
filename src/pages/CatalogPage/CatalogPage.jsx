@@ -17,12 +17,12 @@ const CatalogPage = () => {
 
   useEffect(() => {
     const getAdverts = async () => {
-      const searchParams = new URLSearchParams({ page, limit: 1 });
+      const searchParams = new URLSearchParams({ page, limit: 12 });
       if (make) searchParams.set("make", make.split("/")[0]);
 
       const data = await dispatch(fetchAdverts(searchParams)).unwrap();
 
-      if (data.length < 1) setLoadMore(false);
+      if (data.length < 12) setLoadMore(false);
       setTotalItems((prevItems) => [...prevItems, ...data]);
     };
 
