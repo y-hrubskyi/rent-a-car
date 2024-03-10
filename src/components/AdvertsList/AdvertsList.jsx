@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AdvertsItem } from "@/components/AdvertsItem/AdvertsItem";
 import { selectFavoritesAdverts } from "@/store/adverts/selectors";
 import { addToFavorites, removeFromFavorites } from "@/store/adverts/slice";
-import { isFavoriteById } from "@/utils/isFavoriteById";
+import { isFavoriteById } from "@/utils";
 import { List } from "./AdvertsList.styled";
 
 export const AdvertsList = ({ adverts }) => {

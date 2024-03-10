@@ -6,7 +6,7 @@ import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
 import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectIsLoading } from "@/store/adverts/selectors";
-import { filterList } from "@/utils/filterList";
+import { filterList } from "@/utils";
 import { LoadMoreBtn } from "./CatalogPage.styled";
 
 const CatalogPage = () => {

@@ -1,8 +1,7 @@
 import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
 import { useModal } from "@/hooks/useModal";
-import { splitAddress } from "@/utils/splitAddress";
-import { getMinLengthFeature } from "@/utils/getMinLengthFeature";
 import * as SC from "./AdvertsItem.styled";
+import { getMinLengthFeature, splitAddress } from "@/utils";
 
 export const AdvertsItem = ({
   advert,
