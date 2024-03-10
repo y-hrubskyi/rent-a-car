@@ -45,13 +45,13 @@ const CatalogPage = () => {
   };
 
   const filteredList = filterList({ list: totalItems, price: rentalPrice });
-  const noResult = filteredList.length === 0 && !loadMore;
+  const noResults = filteredList.length === 0 && !loadMore;
 
   return (
     <>
       <SearchBar onSubmit={searchSubmit} />
       {filteredList.length > 0 && <AdvertsList adverts={filteredList} />}
-      {noResult && (
+      {noResults && (
         <Placeholder>
           Sorry, no results found. Please try a different search query
         </Placeholder>
