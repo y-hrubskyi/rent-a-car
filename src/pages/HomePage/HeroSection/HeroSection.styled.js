@@ -4,12 +4,21 @@ import { Link } from "react-router-dom";
 import HeroImg from "@/assets/img/hero.webp";
 
 export const Hero = styled.section`
-  display: flex;
-  height: 220px;
   margin-bottom: ${(p) => p.theme.spacing(20)};
 `;
 
+export const PageTitle = styled.h1`
+  margin-bottom: ${(p) => p.theme.spacing(10)};
+  text-align: center;
+  font-size: 2em;
+`;
+
+export const HeroContainer = styled.div`
+  display: flex;
+`;
+
 export const HeroImgBg = styled.div`
+  height: 220px;
   display: inline-flex;
   margin-right: ${(p) => p.theme.spacing(20)};
 
