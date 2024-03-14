@@ -56,7 +56,6 @@ export const DetailsList = styled.ul`
   flex-wrap: wrap;
   row-gap: ${(p) => p.theme.spacing(2)};
   column-gap: ${(p) => p.theme.spacing(6)};
-  max-width: 277px;
   margin-bottom: ${(p) => p.theme.spacing(7)};
 `;
 
