@@ -1,4 +1,4 @@
-import{r as d,u as o,j as t,b as B,c as F,d as P,e as S}from"./index-DU7tO7-h.js";const T=e=>d.createElement("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",...e},d.createElement("path",{d:"M18 6L6 18",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"}),d.createElement("path",{d:"M6 6L18 18",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"})),W=o.div`
+import{r as d,u as o,j as t,b as B,c as F,d as P,e as S}from"./index-BZsPbuk1.js";const T=e=>d.createElement("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",...e},d.createElement("path",{d:"M18 6L6 18",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"}),d.createElement("path",{d:"M6 6L18 18",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"})),W=o.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -16,17 +16,17 @@ import{r as d,u as o,j as t,b as B,c as F,d as P,e as S}from"./index-DU7tO7-h.js
   transform: translate(-50%, -50%);
 
   width: 541px;
+  max-height: 90%;
   padding: ${e=>e.theme.spacing(20)};
 
   background-color: ${e=>e.theme.colors.white};
   border-radius: ${e=>e.theme.radii.modal};
+  overflow: auto;
 
   @media screen and (max-width: 767px) {
     & {
       width: 70%;
       min-width: 320px;
-      max-height: 90%;
-      overflow: auto;
     }
   }
 `,O=o.button`
