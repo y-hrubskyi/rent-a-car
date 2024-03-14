@@ -1,10 +1,25 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding-right: ${(p) => p.theme.spacing(64)};
-  padding-left: ${(p) => p.theme.spacing(64)};
+
+  padding-right: ${(p) => p.theme.spacing(10)};
+  padding-left: ${(p) => p.theme.spacing(10)};
+
+  @media screen and (min-width: 768px) {
+    & {
+      padding-right: ${(p) => p.theme.spacing(30)};
+      padding-left: ${(p) => p.theme.spacing(30)};
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    & {
+      padding-right: ${(p) => p.theme.spacing(64)};
+      padding-left: ${(p) => p.theme.spacing(64)};
+    }
+  }
 `;
 
 export const Main = styled.main`

@@ -44,7 +44,7 @@ export const AdvertsItem = ({
       <SC.ImgWrapper>
         <SC.Img src={img} alt={`${make} ${model}`} />
         <SC.HeartBtn type="button" onClick={handleClick}>
-          <SC.HeartIcon isfavorite={isFavorite ? " " : ""} />
+          <SC.HeartIcon data-is-favorite={isFavorite} />
         </SC.HeartBtn>
       </SC.ImgWrapper>
       <SC.CardInfo>

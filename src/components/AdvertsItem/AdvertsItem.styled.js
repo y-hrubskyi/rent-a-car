@@ -53,8 +53,8 @@ export const HeartIcon = styled(HeartSVG)`
   height: 18px;
 
   stroke: ${(p) =>
-    p.isfavorite ? p.theme.colors.accent : "rgba(255, 255, 255, 0.8)"};
-  fill: ${(p) => (p.isfavorite ? p.theme.colors.accent : "none")};
+    p["data-is-favorite"] ? p.theme.colors.accent : "rgba(255, 255, 255, 0.8)"};
+  fill: ${(p) => (p["data-is-favorite"] ? p.theme.colors.accent : "none")};
 `;
 
 export const Img = styled.img`

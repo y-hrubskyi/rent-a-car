@@ -25,8 +25,9 @@ export const SelectBase = ({
         }),
       }}
       options={options}
+      isClearable={true}
       placeholder={placeholder}
-      onChange={({ value }) => onChange(value)}
+      onChange={(selected) => onChange(selected?.value || "")}
     />
   );
 };

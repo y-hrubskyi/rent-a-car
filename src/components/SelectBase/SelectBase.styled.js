@@ -42,6 +42,15 @@ export const selectStyles = {
   indicatorSeparator: () => ({
     display: "none",
   }),
+  clearIndicator: (baseStyles) => ({
+    ...baseStyles,
+    padding: 0,
+    color: theme.colors.grayForInputs(0.5),
+    transition: theme.transition("color"),
+    "&:hover": {
+      color: theme.colors.dark(),
+    },
+  }),
   dropdownIndicator: (baseStyles) => ({
     ...baseStyles,
     padding: 0,

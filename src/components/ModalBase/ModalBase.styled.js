@@ -25,6 +25,15 @@ export const Modal = styled.div`
 
   background-color: ${(p) => p.theme.colors.white};
   border-radius: ${(p) => p.theme.radii.modal};
+
+  @media screen and (max-width: 767px) {
+    & {
+      width: 70%;
+      min-width: 320px;
+      max-height: 90%;
+      overflow: auto;
+    }
+  }
 `;
 
 export const CloseBtn = styled.button`

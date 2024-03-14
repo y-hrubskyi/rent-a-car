@@ -15,24 +15,41 @@ export const PageTitle = styled.h1`
 
 export const HeroContainer = styled.div`
   display: flex;
-`;
-
-export const HeroImgBg = styled.div`
-  height: 220px;
-  display: inline-flex;
-  margin-right: ${(p) => p.theme.spacing(20)};
-
-  width: 120%;
-  background: url(${HeroImg});
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border-radius: ${(p) => p.theme.radii.img};
-`;
-
-export const HeroWrapper = styled.div`
-  display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  height: 320px;
+  padding-left: ${(p) => p.theme.spacing(20)};
+  padding-right: ${(p) => p.theme.spacing(20)};
+
+  background: url(${HeroImg});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: ${(p) => p.theme.radii.img};
+
+  @media screen and (min-width: 768px) {
+    & {
+      height: 320px;
+      background-position: right;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    & {
+      height: 400px;
+    }
+  }
+`;
+
+export const HeroTitle = styled.h2`
+  max-width: 400px;
+  padding: ${(p) => p.theme.spacing(5)};
+
+  color: ${(p) => p.theme.colors.white};
+
+  border-radius: ${(p) => p.theme.radii.img};
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
 `;
 
 export const StyledLink = styled(Link)`
