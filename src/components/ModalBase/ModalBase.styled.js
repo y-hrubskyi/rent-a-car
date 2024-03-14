@@ -21,17 +21,17 @@ export const Modal = styled.div`
   transform: translate(-50%, -50%);
 
   width: 541px;
+  max-height: 90%;
   padding: ${(p) => p.theme.spacing(20)};
 
   background-color: ${(p) => p.theme.colors.white};
   border-radius: ${(p) => p.theme.radii.modal};
+  overflow: auto;
 
   @media screen and (max-width: 767px) {
     & {
       width: 70%;
       min-width: 320px;
-      max-height: 90%;
-      overflow: auto;
     }
   }
 `;
