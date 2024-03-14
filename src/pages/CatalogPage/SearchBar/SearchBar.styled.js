@@ -2,13 +2,21 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: ${(p) => p.theme.spacing(9)};
   margin-bottom: ${(p) => p.theme.spacing(25)};
+
+  @media screen and (min-width: 768px) {
+    & {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
 `;
 
-export const FormGroup = styled.label`
+export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${(p) => p.theme.spacing(4)};
@@ -16,7 +24,14 @@ export const FormGroup = styled.label`
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28571;
+  text-align: center;
   color: ${(p) => p.theme.colors.grayForInputs()};
+
+  @media screen and (min-width: 768px) {
+    & {
+      text-align: left;
+    }
+  }
 `;
 
 export const SubmitBtn = styled.button`
