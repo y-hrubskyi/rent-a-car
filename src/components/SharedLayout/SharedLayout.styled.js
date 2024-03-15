@@ -23,6 +23,6 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  padding-top: ${(p) => p.theme.spacing(35)};
-  padding-bottom: ${(p) => p.theme.spacing(75)};
+  padding-top: ${(p) => p.theme.spacing(20)};
+  padding-bottom: ${(p) => p.theme.spacing(50)};
 `;

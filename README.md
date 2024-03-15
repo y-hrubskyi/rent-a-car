@@ -2,7 +2,7 @@
 
 ## Overview
 
-Rent a Car App is a web application that allows users to browse and rent cars. The platform provides a catalog of available cars, with options to filter by model and rental price. Users can also add cars to their favorites list.
+Rent a Car App is a web application that allows users to browse and rent cars. The platform provides a catalog of available cars, with options to filter by model and rental price. Users can also add cars to their favorites list. Additionally, the project incorporates a responsive design approach to ensure optimal viewing across different devices.
 
 ## Preview
 
@@ -16,17 +16,18 @@ Include demo GIF to visually showcase the application.
   Browse a catalog of available cars, filtering by model and rental price.
 - **Favorites:**
   Add cars to your favorites list for quick access.
-- **User-Friendly Interface:**
-  Enjoy a seamless experience with an intuitive and attractive design.
 - **Rental Information:**
   View detailed information about each car, including fuel consumption, engine size, and mileage.
+- **User-Friendly Interface:**
+  Enjoy a seamless experience with an intuitive, attractive and responsive design.
 
 ## Tech Stack
 
 - **Frontend:**
-  - React.js: A popular JavaScript library for building user interfaces.
+  - React: A popular JavaScript library for building user interfaces.
   - Styled Components: For styling and theming components in a dynamic and maintainable way.
   - Redux Toolkit: State management library for handling application-level state.
+  - React Router: Declarative routing in single-page applications.
 - **Backend:**
   - MockAPI: A tool for creating fake APIs, used for simulating backend functionality during development.
 - **Deployment:**
