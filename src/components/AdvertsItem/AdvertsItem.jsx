@@ -2,6 +2,7 @@ import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
 import { useModal } from "@/hooks/useModal";
 import * as SC from "./AdvertsItem.styled";
 import { getMinLengthFeature, splitAddress } from "@/utils";
+import toast from "react-hot-toast";
 
 export const AdvertsItem = ({
   advert,
@@ -25,8 +26,13 @@ export const AdvertsItem = ({
   } = advert;
 
   const handleClick = () => {
-    if (isFavorite) return onRemoveFavorite();
-    onAddFavorite();
+    if (isFavorite) {
+      onRemoveFavorite();
+      toast.success("Advert removed from favorites");
+    } else {
+      onAddFavorite();
+      toast.success("Advert added to favorites");
+    }
   };
 
   const [country, city] = splitAddress(address);

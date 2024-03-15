@@ -10,15 +10,15 @@ import { persistor, store } from "@/store/store.js";
 import { theme } from "@/styles/theme.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/rent-a-car">
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <ThemeProvider theme={theme}>
-            <App />
-          </ThemeProvider>
-        </PersistGate>
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter basename="/rent-a-car">
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+      </PersistGate>
+    </Provider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );

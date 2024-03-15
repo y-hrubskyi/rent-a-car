@@ -8,7 +8,7 @@ export const fetchAdverts = createAsyncThunk(
       const { data } = await axios.get(`/adverts?${searchParams}`);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
