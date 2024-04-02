@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { SearchBar } from "./SearchBar/SearchBar";
-import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
+import { AdvertList } from "@/components/AdvertList/AdvertList";
 import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectError, selectIsLoading } from "@/store/adverts/selectors";
@@ -55,7 +55,7 @@ const CatalogPage = () => {
   return (
     <>
       <SearchBar onSubmit={searchSubmit} />
-      {filteredList.length > 0 && <AdvertsList adverts={filteredList} />}
+      {filteredList.length > 0 && <AdvertList adverts={filteredList} />}
       {!error && loadMore && (
         <LoadMoreBtn onClick={handleIncrementPage}>
           {isLoading ? "Loading..." : "Load more"}

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 import { Placeholder } from "@/components/Placeholder/Placeholder";
-import { AdvertsList } from "@/components/AdvertsList/AdvertsList";
+import { AdvertList } from "@/components/AdvertList/AdvertList";
 import { selectFavoritesAdverts } from "@/store/adverts/selectors";
 
 const FavoritesPage = () => {
@@ -11,7 +11,7 @@ const FavoritesPage = () => {
     return <Placeholder>Your list of favorites is currently empty</Placeholder>;
   }
 
-  return <AdvertsList adverts={data} />;
+  return <AdvertList adverts={data} />;
 };
 
 export default FavoritesPage;
