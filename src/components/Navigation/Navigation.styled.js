@@ -23,9 +23,16 @@ export const StyledLink = styled(NavLink)`
   text-align: center;
   color: ${(p) => p.theme.colors.dark()};
   text-decoration: none;
+
+  border: 1px solid ${(p) => p.theme.colors.accent};
   border-radius: ${(p) => p.theme.radii.btn};
 
-  &.active {
+  transition: ${(p) => p.theme.transition("color")},
+    ${(p) => p.theme.transition("background-color")};
+
+  &.active,
+  &:hover,
+  &:focus {
     color: ${(p) => p.theme.colors.white};
     background-color: ${(p) => p.theme.colors.accent};
   }

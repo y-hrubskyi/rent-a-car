@@ -70,7 +70,8 @@ export const StyledLink = styled(Link)`
 
   transition: ${(p) => p.theme.transition("background-color")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${(p) => p.theme.colors.hover};
   }
 `;

@@ -8,7 +8,7 @@ export const selectStyles = {
     cursor: "pointer",
     border: "none",
     boxShadow: "none",
-    backgroundColor: theme.colors.whiteForInputs,
+    backgroundColor: theme.colors.selectBg,
     "& .css-tj5bde-Svg": {
       transform: state.menuIsOpen && "rotate(180deg)",
     },

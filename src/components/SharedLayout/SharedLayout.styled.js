@@ -8,17 +8,13 @@ export const Container = styled.div`
   padding-left: ${(p) => p.theme.spacing(10)};
 
   @media screen and (min-width: 768px) {
-    & {
-      padding-right: ${(p) => p.theme.spacing(30)};
-      padding-left: ${(p) => p.theme.spacing(30)};
-    }
+    padding-right: ${(p) => p.theme.spacing(30)};
+    padding-left: ${(p) => p.theme.spacing(30)};
   }
 
   @media screen and (min-width: 1440px) {
-    & {
-      padding-right: ${(p) => p.theme.spacing(64)};
-      padding-left: ${(p) => p.theme.spacing(64)};
-    }
+    padding-right: ${(p) => p.theme.spacing(64)};
+    padding-left: ${(p) => p.theme.spacing(64)};
   }
 `;
 

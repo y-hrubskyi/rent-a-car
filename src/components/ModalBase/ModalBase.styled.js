@@ -28,10 +28,26 @@ export const Modal = styled.div`
   border-radius: ${(p) => p.theme.radii.modal};
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: ${(p) => p.theme.colors.dark(0.2)};
+  }
+
   @media screen and (max-width: 767px) {
     & {
       width: 70%;
       min-width: 320px;
+      padding: ${(p) => p.theme.spacing(14)};
     }
   }
 `;
@@ -48,11 +64,34 @@ export const CloseBtn = styled.button`
 
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    color: ${(p) => p.theme.colors.hover};
+  }
+
+  @media screen and (max-width: 767px) {
+    & {
+      top: 12px;
+      right: 12px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;
 
 export const CrossIcon = styled(CrossSVG)`
   width: 24px;
   height: 24px;
 
-  stroke: ${(p) => p.theme.colors.dark()};
+  stroke: currentColor;
+
+  transition: ${(p) => p.theme.transition("color")};
+
+  @media screen and (max-width: 767px) {
+    & {
+      width: 20px;
+      height: 20px;
+    }
+  }
 `;

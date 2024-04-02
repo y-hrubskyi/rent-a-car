@@ -18,7 +18,8 @@ export const LoadMoreBtn = styled.button`
 
   transition: ${(p) => p.theme.transition("color")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: ${(p) => p.theme.colors.hover};
   }
 `;

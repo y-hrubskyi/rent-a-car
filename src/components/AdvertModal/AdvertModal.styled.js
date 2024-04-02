@@ -113,7 +113,7 @@ export const ConditionsList = styled.ul`
 
 export const ConditionItem = styled.li`
   border-radius: 35px;
-  padding: 7px 14px;
+  padding: ${(p) => p.theme.spacing(3.5)} ${(p) => p.theme.spacing(7)};
   background-color: #f9f9f9;
 `;
 
@@ -149,7 +149,8 @@ export const RentalCarBtn = styled.a`
 
   transition: ${(p) => p.theme.transition("background-color")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${(p) => p.theme.colors.hover};
   }
 `;

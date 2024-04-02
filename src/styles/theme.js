@@ -3,7 +3,7 @@ export const theme = {
     white: "#fff",
     dark: (alpha = 1) => `rgba(18, 20, 23, ${alpha})`,
     grayForInputs: (alpha = 1) => `rgba(138, 138, 137, ${alpha})`,
-    whiteForInputs: "#f7f7fb",
+    selectBg: "#f7f7fb",
     accent: "#3470ff",
     hover: "#0b44cd",
   },

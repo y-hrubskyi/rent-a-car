@@ -48,7 +48,8 @@ export const SubmitBtn = styled.button`
 
   transition: ${(p) => p.theme.transition("background-color")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${(p) => p.theme.colors.hover};
   }
 `;

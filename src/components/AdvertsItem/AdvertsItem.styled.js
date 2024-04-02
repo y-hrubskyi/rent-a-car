@@ -55,6 +55,9 @@ export const HeartIcon = styled(HeartSVG)`
   stroke: ${(p) =>
     p["data-is-favorite"] ? p.theme.colors.accent : "rgba(255, 255, 255, 0.8)"};
   fill: ${(p) => (p["data-is-favorite"] ? p.theme.colors.accent : "none")};
+
+  transition: ${(p) => p.theme.transition("stroke")},
+    ${(p) => p.theme.transition("fill")};
 `;
 
 export const Img = styled.img`
@@ -149,7 +152,8 @@ export const LearnMoreBtn = styled.button`
 
   transition: ${(p) => p.theme.transition("background-color")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${(p) => p.theme.colors.hover};
   }
 `;
