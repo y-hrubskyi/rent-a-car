@@ -1,8 +1,10 @@
-import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
-import { useModal } from "@/hooks/useModal";
-import * as SC from "./AdvertItem.styled";
-import { getMinLengthFeature, splitAddress } from "@/utils";
 import toast from "react-hot-toast";
+
+import { useModal } from "@/hooks/useModal";
+import { getMinLengthFeature, splitAddress } from "@/utils";
+
+import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
+import * as SC from "./AdvertItem.styled";
 
 export const AdvertItem = ({
   advert,

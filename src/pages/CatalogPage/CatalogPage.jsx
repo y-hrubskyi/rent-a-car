@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { AdvertList } from "@/components/AdvertList/AdvertList";
-import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { fetchAdverts } from "@/store/adverts/operations";
 import { selectError, selectIsLoading } from "@/store/adverts/selectors";
 import { filterList } from "@/utils";
+
+import { SearchBar } from "@/components/SearchBar/SearchBar";
+import { AdvertList } from "@/components/AdvertList/AdvertList";
+import { Placeholder } from "@/components/Placeholder/Placeholder";
 import { LoadMoreBtn } from "./CatalogPage.styled";
 
 const CatalogPage = () => {

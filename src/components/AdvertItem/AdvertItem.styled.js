@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import HeartSVG from "@/assets/icons/heart.svg?react";
 import CarPlaceholder from "@/assets/img/car-placeholder.jpg";
 

@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 
+import makes from "@/data/makes.json";
+
 import { SelectBase } from "@/components/SelectBase/SelectBase";
 import { Form, FormGroup, SubmitBtn } from "./SearchBar.styled";
-
-import makes from "@/data/makes.json";
 
 export const SearchBar = ({ onSubmit }) => {
   const [make, setMake] = useState("");

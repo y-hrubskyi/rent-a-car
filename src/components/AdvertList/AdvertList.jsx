@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { AdvertItem } from "@/components/AdvertItem/AdvertItem";
 import { selectFavoritesAdverts } from "@/store/adverts/selectors";
 import { addToFavorites, removeFromFavorites } from "@/store/adverts/slice";
 import { isFavoriteById } from "@/utils";
+
+import { AdvertItem } from "@/components/AdvertItem/AdvertItem";
 import { List } from "./AdvertList.styled";
 
 export const AdvertList = ({ adverts }) => {

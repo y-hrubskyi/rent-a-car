@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import PlaceholderImg from "@/assets/img/empty-placeholder.png";
 
 export const PlaceholderWrapper = styled.div`

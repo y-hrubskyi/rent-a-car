@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import CrossSVG from "@/assets/icons/cross.svg?react";
 
 export const Backdrop = styled.div`
