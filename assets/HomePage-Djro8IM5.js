@@ -1,10 +1,10 @@
-import{u as i,L as n,j as t}from"./index-9leG8fyi.js";const o="/rent-a-car/assets/hero-DSRpp0pq.webp",s=i.section`
+import{u as i,L as n,j as t}from"./index-CB_GK7SR.js";const o="/rent-a-car/assets/hero-DSRpp0pq.webp",s=i.section`
   margin-bottom: ${e=>e.theme.spacing(20)};
-`,a=i.h1`
+`,c=i.h1`
   margin-bottom: ${e=>e.theme.spacing(10)};
   text-align: center;
   font-size: 2em;
-`,c=i.div`
+`,a=i.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -57,10 +57,11 @@ import{u as i,L as n,j as t}from"./index-9leG8fyi.js";const o="/rent-a-car/asset
 
   transition: ${e=>e.theme.transition("background-color")};
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${e=>e.theme.colors.hover};
   }
-`,h=()=>t.jsxs(s,{children:[t.jsx(a,{children:"Welcome to our car agency"}),t.jsxs(c,{children:[t.jsx(d,{children:"We provide a wide selection of cars for rent. Find the perfect car for your travel or business trip"}),t.jsx(l,{to:"/catalog",children:"Let's go"})]})]}),m=i.h2`
+`,h=()=>t.jsxs(s,{children:[t.jsx(c,{children:"Welcome to our car agency"}),t.jsxs(a,{children:[t.jsx(d,{children:"We provide a wide selection of cars for rent. Find the perfect car for your travel or business trip"}),t.jsx(l,{to:"/catalog",children:"Ride On!"})]})]}),m=i.h2`
   margin-bottom: ${e=>e.theme.spacing(10)};
   text-align: center;
 `,g=i.p`
