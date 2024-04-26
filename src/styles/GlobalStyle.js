@@ -2,20 +2,15 @@ import { createGlobalStyle } from "styled-components";
 import "modern-normalize";
 
 import ManropeRegularWOFF2 from "@/assets/fonts/Manrope-Regular.woff2";
-import ManropeRegularWOFF from "@/assets/fonts/Manrope-Regular.woff";
 import ManropeMediumWOFF2 from "@/assets/fonts/Manrope-Medium.woff2";
-import ManropeMediumWOFF from "@/assets/fonts/Manrope-Medium.woff";
 import ManropeSemiBoldWOFF2 from "@/assets/fonts/Manrope-SemiBold.woff2";
-import ManropeSemiBoldWOFF from "@/assets/fonts/Manrope-SemiBold.woff";
 import MontserratRegularWOFF2 from "@/assets/fonts/Montserrat-Regular.woff2";
-import MontserratRegularWOFF from "@/assets/fonts/Montserrat-Regular.woff";
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Manrope";
     src: local("Manrope"),
-      url(${ManropeRegularWOFF2}) format("woff2"),
-      url(${ManropeRegularWOFF}) format("woff");
+      url(${ManropeRegularWOFF2}) format("woff2");
     font-weight: normal;
     font-style: normal;
   }
@@ -23,8 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Manrope";
     src: local("Manrope"),
-      url(${ManropeMediumWOFF2}) format("woff2"),
-      url(${ManropeMediumWOFF}) format("woff");
+      url(${ManropeMediumWOFF2}) format("woff2");
     font-weight: 500;
     font-style: normal;
   }
@@ -32,8 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Manrope";
     src: local("Manrope"),
-      url(${ManropeSemiBoldWOFF2}) format("woff2"),
-      url(${ManropeSemiBoldWOFF}) format("woff");
+      url(${ManropeSemiBoldWOFF2}) format("woff2");
     font-weight: 600;
     font-style: normal;
   }
@@ -41,8 +34,7 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Montserrat";
     src: local("Montserrat"),
-      url(${MontserratRegularWOFF2}) format("woff2"),
-      url(${MontserratRegularWOFF}) format("woff");
+      url(${MontserratRegularWOFF2}) format("woff2");
     font-weight: normal;
     font-style: normal;
   }

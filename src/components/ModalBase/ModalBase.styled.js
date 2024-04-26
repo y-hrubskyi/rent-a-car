@@ -45,11 +45,9 @@ export const Modal = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    & {
-      width: 70%;
-      min-width: 320px;
-      padding: ${(p) => p.theme.spacing(14)};
-    }
+    width: 70%;
+    min-width: 320px;
+    padding: ${(p) => p.theme.spacing(14)};
   }
 `;
 
@@ -72,12 +70,10 @@ export const CloseBtn = styled.button`
   }
 
   @media screen and (max-width: 767px) {
-    & {
-      top: 12px;
-      right: 12px;
-      width: 20px;
-      height: 20px;
-    }
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
   }
 `;
 
@@ -90,9 +86,7 @@ export const CrossIcon = styled(CrossSVG)`
   transition: ${(p) => p.theme.transition("color")};
 
   @media screen and (max-width: 767px) {
-    & {
-      width: 20px;
-      height: 20px;
-    }
+    width: 20px;
+    height: 20px;
   }
 `;
