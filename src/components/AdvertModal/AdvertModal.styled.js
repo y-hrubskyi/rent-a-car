@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import CarPlaceholder from "@/assets/img/car-placeholder.jpg";
+import CarPlaceholder from "@/assets/img/placeholders/car.webp";
 
 export const ImgWrapper = styled.div`
   width: 100%;

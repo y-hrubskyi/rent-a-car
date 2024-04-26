@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import PlaceholderImg from "@/assets/img/empty-placeholder.png";
+import PlaceholderImg from "@/assets/img/placeholders/empty-and-error.webp";
 
 export const PlaceholderWrapper = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import HeartSVG from "@/assets/icons/heart.svg?react";
-import CarPlaceholder from "@/assets/img/car-placeholder.jpg";
+import CarPlaceholder from "@/assets/img/placeholders/car.webp";
 
 export const Card = styled.li`
   width: 274px;
