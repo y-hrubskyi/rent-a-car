@@ -28,16 +28,12 @@ export const HeroContainer = styled.div`
   border-radius: ${(p) => p.theme.radii.img};
 
   @media screen and (min-width: 768px) {
-    & {
-      height: 320px;
-      background-position: right;
-    }
+    height: 320px;
+    background-position: right;
   }
 
   @media screen and (min-width: 1440px) {
-    & {
-      height: 400px;
-    }
+    height: 400px;
   }
 `;
 

@@ -20,12 +20,10 @@ export const FeatureList = styled.ul`
   gap: ${(p) => p.theme.spacing(10)};
 
   @media screen and (min-width: 768px) {
-    & {
-      justify-content: space-around;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 0;
-    }
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
   }
 `;
 
@@ -37,8 +35,6 @@ export const FeatureItem = styled.li`
   color: ${(p) => p.theme.colors.dark()};
 
   @media screen and (min-width: 768px) {
-    & {
-      max-width: 25%;
-    }
+    max-width: 25%;
   }
 `;

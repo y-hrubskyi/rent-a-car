@@ -9,10 +9,8 @@ export const Form = styled.form`
   margin-bottom: ${(p) => p.theme.spacing(25)};
 
   @media screen and (min-width: 768px) {
-    & {
-      flex-direction: row;
-      align-items: flex-end;
-    }
+    flex-direction: row;
+    align-items: flex-end;
   }
 `;
 
@@ -28,9 +26,7 @@ export const FormGroup = styled.div`
   color: ${(p) => p.theme.colors.grayForInputs()};
 
   @media screen and (min-width: 768px) {
-    & {
-      text-align: left;
-    }
+    text-align: left;
   }
 `;
 
