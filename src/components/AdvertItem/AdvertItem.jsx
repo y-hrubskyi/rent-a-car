@@ -51,7 +51,11 @@ export const AdvertItem = ({
     <SC.Card>
       <SC.ImgWrapper>
         <SC.Img src={img} alt={`${make} ${model}`} />
-        <SC.HeartBtn type="button" onClick={handleClick}>
+        <SC.HeartBtn
+          type="button"
+          onClick={handleClick}
+          aria-label={`${isFavorite ? "remove from" : "Add to"} favorites`}
+        >
           <SC.HeartIcon data-is-favorite={isFavorite} />
         </SC.HeartBtn>
       </SC.ImgWrapper>
