@@ -1,4 +1,4 @@
-import{u as i,L as n,j as t}from"./index-CB_GK7SR.js";const o="/rent-a-car/assets/hero-DSRpp0pq.webp",s=i.section`
+import{u as i,L as n,j as t}from"./index-BC1r_bYQ.js";const o="/rent-a-car/assets/hero-Co8yIVSU.webp",s=i.section`
   margin-bottom: ${e=>e.theme.spacing(20)};
 `,c=i.h1`
   margin-bottom: ${e=>e.theme.spacing(10)};
@@ -19,16 +19,12 @@ import{u as i,L as n,j as t}from"./index-CB_GK7SR.js";const o="/rent-a-car/asset
   border-radius: ${e=>e.theme.radii.img};
 
   @media screen and (min-width: 768px) {
-    & {
-      height: 320px;
-      background-position: right;
-    }
+    height: 320px;
+    background-position: right;
   }
 
   @media screen and (min-width: 1440px) {
-    & {
-      height: 400px;
-    }
+    height: 400px;
   }
 `,d=i.h2`
   max-width: 400px;
@@ -77,12 +73,10 @@ import{u as i,L as n,j as t}from"./index-CB_GK7SR.js";const o="/rent-a-car/asset
   gap: ${e=>e.theme.spacing(10)};
 
   @media screen and (min-width: 768px) {
-    & {
-      justify-content: space-around;
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 0;
-    }
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
   }
 `,r=i.li`
   max-width: 400px;
@@ -92,8 +86,6 @@ import{u as i,L as n,j as t}from"./index-CB_GK7SR.js";const o="/rent-a-car/asset
   color: ${e=>e.theme.colors.dark()};
 
   @media screen and (min-width: 768px) {
-    & {
-      max-width: 25%;
-    }
+    max-width: 25%;
   }
 `,x=()=>t.jsxs("section",{children:[t.jsx(m,{children:"Our capabilities"}),t.jsx(g,{children:"Take advantage of our service:"}),t.jsxs(p,{children:[t.jsxs(r,{children:[t.jsx("b",{children:"Choose"})," from a variety of car models, including comfortable sedans, station wagons and SUVs."]}),t.jsxs(r,{children:[t.jsx("b",{children:"Filter"})," ads by model, rental price to find the perfect option for you."]}),t.jsxs(r,{children:[t.jsx("b",{children:"Add"})," your favorite listings to your favorites for quick access."]})]})]}),f=()=>t.jsxs(t.Fragment,{children:[t.jsx(h,{}),t.jsx(x,{})]});export{f as default};
