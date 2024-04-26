@@ -10,7 +10,14 @@ export const SharedLayout = () => {
   return (
     <Container>
       <GlobalStyle />
-      <Toaster toastOptions={{ duration: 1500 }} />
+      <Toaster
+        toastOptions={{
+          duration: 1500,
+          style: {
+            fontWeight: 700,
+          },
+        }}
+      />
 
       <Header />
       <Main>
