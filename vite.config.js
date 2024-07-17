@@ -8,16 +8,7 @@ export default defineConfig({
   base: "/rent-a-car/",
   resolve: {
     alias: {
-      "@/": "/src",
-      "@/assets": "/src/assets",
-      "@/components": "/src/components",
-      "@/data": "/src/data",
-      "@/hooks": "/src/hooks",
-      "@/pages": "/src/pages",
-      "@/services": "/src/services",
-      "@/store": "/src/store",
-      "@/styles": "/src/styles",
-      "@/utils": "/src/utils",
+      "@": "/src",
     },
   },
 });
