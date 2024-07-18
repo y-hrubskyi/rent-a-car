@@ -1,16 +1,16 @@
-import toast from "react-hot-toast";
+import toast from 'react-hot-toast';
 
-import { useModal } from "@/hooks/useModal";
-import { getMinLengthFeature, splitAddress } from "@/utils";
+import { useModal } from '@/hooks/useModal';
+import { getMinLengthFeature, splitAddress } from '@/utils';
 
-import { AdvertModal } from "@/components/AdvertModal/AdvertModal";
-import * as SC from "./AdvertItem.styled";
+import { AdvertModal } from '@/components/AdvertModal/AdvertModal';
+import * as SC from './AdvertItem.styled';
 
 export const AdvertItem = ({
   advert,
   isFavorite,
   onAddFavorite,
-  onRemoveFavorite,
+  onRemoveFavorite
 }) => {
   const { isOpen, toggleModal } = useModal();
   const {
@@ -24,16 +24,16 @@ export const AdvertItem = ({
     rentalCompany,
     address,
     accessories,
-    functionalities,
+    functionalities
   } = advert;
 
   const handleClick = () => {
     if (isFavorite) {
       onRemoveFavorite();
-      toast.success("Advert removed from favorites");
+      toast.success('Advert removed from favorites');
     } else {
       onAddFavorite();
-      toast.success("Advert added to favorites");
+      toast.success('Advert added to favorites');
     }
   };
 
@@ -41,7 +41,7 @@ export const AdvertItem = ({
   const feature = getMinLengthFeature(accessories, functionalities);
 
   const details = [city, country, rentalCompany, type, make, id, feature];
-  const detailsList = details.map((detail) => (
+  const detailsList = details.map(detail => (
     <SC.DetailsItem key={detail}>
       <SC.Detail>{detail}</SC.Detail>
     </SC.DetailsItem>
@@ -54,7 +54,7 @@ export const AdvertItem = ({
         <SC.HeartBtn
           type="button"
           onClick={handleClick}
-          aria-label={`${isFavorite ? "remove from" : "Add to"} favorites`}
+          aria-label={`${isFavorite ? 'remove from' : 'Add to'} favorites`}
         >
           <SC.HeartIcon data-is-favorite={isFavorite} />
         </SC.HeartBtn>

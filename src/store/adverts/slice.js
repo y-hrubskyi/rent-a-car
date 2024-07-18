@@ -1,28 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import { createSlice } from '@reduxjs/toolkit';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-import { fetchAdverts } from "./operations";
+import { fetchAdverts } from './operations';
 
 export const advertsSlice = createSlice({
-  name: "adverts",
+  name: 'adverts',
   initialState: {
     items: [],
     favorites: [],
     isLoading: false,
-    error: null,
+    error: null
   },
   reducers: {
     addToFavorites: (state, { payload }) => {
       state.favorites.push(payload);
     },
     removeFromFavorites: (state, { payload }) => {
-      state.favorites = state.favorites.filter((item) => item.id !== payload);
-    },
+      state.favorites = state.favorites.filter(item => item.id !== payload);
+    }
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
-      .addCase(fetchAdverts.pending, (state) => {
+      .addCase(fetchAdverts.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
@@ -34,15 +34,15 @@ export const advertsSlice = createSlice({
         state.isLoading = false;
         state.error = payload;
       });
-  },
+  }
 });
 
 export const { addToFavorites, removeFromFavorites } = advertsSlice.actions;
 
 const advertsConfig = {
-  key: "favorites-adverts",
+  key: 'favorites-adverts',
   storage,
-  whitelist: ["favorites"],
+  whitelist: ['favorites']
 };
 
 export const advertsReducer = persistReducer(

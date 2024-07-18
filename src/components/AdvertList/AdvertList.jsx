@@ -1,11 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 
-import { selectFavoritesAdverts } from "@/store/adverts/selectors";
-import { addToFavorites, removeFromFavorites } from "@/store/adverts/slice";
-import { isFavoriteById } from "@/utils";
+import { selectFavoritesAdverts } from '@/store/adverts/selectors';
+import { addToFavorites, removeFromFavorites } from '@/store/adverts/slice';
+import { isFavoriteById } from '@/utils';
 
-import { AdvertItem } from "@/components/AdvertItem/AdvertItem";
-import { List } from "./AdvertList.styled";
+import { AdvertItem } from '@/components/AdvertItem/AdvertItem';
+import { List } from './AdvertList.styled';
 
 export const AdvertList = ({ adverts }) => {
   const favorites = useSelector(selectFavoritesAdverts);
@@ -13,7 +13,7 @@ export const AdvertList = ({ adverts }) => {
 
   return (
     <List>
-      {adverts.map((advert) => (
+      {adverts.map(advert => (
         <AdvertItem
           key={advert.id}
           advert={advert}

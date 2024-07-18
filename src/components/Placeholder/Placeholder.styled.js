@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import PlaceholderImg from "@/assets/img/placeholders/empty-and-error.webp";
+import PlaceholderImg from '@/assets/img/placeholders/empty-and-error.webp';
 
 export const PlaceholderWrapper = styled.div`
   display: flex;
@@ -13,5 +13,5 @@ export const PlaceholderText = styled.p`
   font-size: 18px;
   font-weight: 600;
   text-align: center;
-  color: ${(p) => p.theme.colors.dark()};
+  color: ${p => p.theme.colors.dark()};
 `;

@@ -1,21 +1,21 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState } from 'react';
 
-import makes from "@/data/makes.json";
+import makes from '@/data/makes.json';
 
-import { SelectBase } from "@/components/SelectBase/SelectBase";
-import { Form, FormGroup, SubmitBtn } from "./SearchBar.styled";
+import { SelectBase } from '@/components/SelectBase/SelectBase';
+import { Form, FormGroup, SubmitBtn } from './SearchBar.styled';
 
 export const SearchBar = ({ onSubmit }) => {
-  const [make, setMake] = useState("");
-  const [rentalPrice, setRentalPrice] = useState("");
+  const [make, setMake] = useState('');
+  const [rentalPrice, setRentalPrice] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     onSubmit({ make, rentalPrice });
   };
 
   const makesOptions = useMemo(
-    () => makes.map((make) => ({ value: make, label: make })),
+    () => makes.map(make => ({ value: make, label: make })),
     []
   );
   const priceOptions = useMemo(() => {

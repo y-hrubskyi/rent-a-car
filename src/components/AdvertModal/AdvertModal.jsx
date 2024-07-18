@@ -1,7 +1,7 @@
-import { createConditionsDataArr, createDetailsDataArr } from "@/utils";
+import { createConditionsDataArr, createDetailsDataArr } from '@/utils';
 
-import { ModalBase } from "@/components/ModalBase/ModalBase";
-import * as SC from "./AdvertModal.styled";
+import { ModalBase } from '@/components/ModalBase/ModalBase';
+import * as SC from './AdvertModal.styled';
 
 export const AdvertModal = ({
   onClose,
@@ -20,8 +20,8 @@ export const AdvertModal = ({
     functionalities,
     rentalConditions,
     mileage,
-    rentalPrice,
-  },
+    rentalPrice
+  }
 }) => {
   const details = createDetailsDataArr({
     id,
@@ -29,15 +29,15 @@ export const AdvertModal = ({
     type,
     address,
     fuelConsumption,
-    engineSize,
+    engineSize
   });
-  const detailsList = details.map((detail) => (
+  const detailsList = details.map(detail => (
     <SC.DetailsItem key={detail}>
       <SC.Detail>{detail}</SC.Detail>
     </SC.DetailsItem>
   ));
 
-  const featuresList = [...accessories, ...functionalities].map((feature) => (
+  const featuresList = [...accessories, ...functionalities].map(feature => (
     <SC.DetailsItem key={feature}>
       <SC.Detail>{feature}</SC.Detail>
     </SC.DetailsItem>
@@ -46,13 +46,13 @@ export const AdvertModal = ({
   const splittedConditions = createConditionsDataArr({
     mileage,
     rentalPrice,
-    rentalConditions,
+    rentalConditions
   });
   const conditionsList = splittedConditions.map(([condition, value]) => (
     <SC.ConditionItem key={condition}>
       <SC.Condition>
         {condition}
-        {value && ":"}
+        {value && ':'}
         {value && <SC.AccentCondition>{value}</SC.AccentCondition>}
       </SC.Condition>
     </SC.ConditionItem>

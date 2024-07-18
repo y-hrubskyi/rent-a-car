@@ -1,23 +1,23 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import { Backdrop, CloseBtn, CrossIcon, Modal } from "./ModalBase.styled";
+import { Backdrop, CloseBtn, CrossIcon, Modal } from './ModalBase.styled';
 
 export const ModalBase = ({ onClose, children }) => {
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.code === "Escape") {
+    const handleKeyDown = e => {
+      if (e.code === 'Escape') {
         onClose();
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [onClose]);
 
-  const handleOverlayClick = (e) => {
+  const handleOverlayClick = e => {
     if (e.target === e.currentTarget) {
       onClose();
     }

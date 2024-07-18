@@ -1,5 +1,5 @@
-import { HeroSection } from "@/components/HeroSection/HeroSection";
-import { FeatureSection } from "@/components/FeatureSection/FeatureSection";
+import { HeroSection } from '@/components/HeroSection/HeroSection';
+import { FeatureSection } from '@/components/FeatureSection/FeatureSection';
 
 const HomePage = () => {
   return (

@@ -1,4 +1,4 @@
-import { NavItem, NavList, StyledLink } from "./Navigation.styled";
+import { NavItem, NavList, StyledLink } from './Navigation.styled';
 
 export const Navigation = () => {
   return (

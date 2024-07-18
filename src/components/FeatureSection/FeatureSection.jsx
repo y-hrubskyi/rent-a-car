@@ -1,4 +1,4 @@
-import * as SC from "./FeatureSection.styled";
+import * as SC from './FeatureSection.styled';
 
 export const FeatureSection = () => {
   return (
