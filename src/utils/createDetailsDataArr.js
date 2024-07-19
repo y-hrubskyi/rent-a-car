@@ -1,4 +1,4 @@
-import { splitAddress } from "./splitAddress";
+import { splitAddress } from './splitAddress';
 
 export const createDetailsDataArr = ({
   id,
@@ -6,7 +6,7 @@ export const createDetailsDataArr = ({
   type,
   address,
   fuelConsumption,
-  engineSize,
+  engineSize
 }) => {
   const [country, city] = splitAddress(address);
   return [
@@ -16,6 +16,6 @@ export const createDetailsDataArr = ({
     `Year: ${year}`,
     `Type: ${type}`,
     `Fuel Consumption: ${fuelConsumption}`,
-    `Engine Size: ${engineSize}`,
+    `Engine Size: ${engineSize}`
   ];
 };

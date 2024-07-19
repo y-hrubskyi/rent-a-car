@@ -1,1 +1,1 @@
-export const splitAddress = (address) => address.split(", ").reverse();
+export const splitAddress = address => address.split(', ').reverse();

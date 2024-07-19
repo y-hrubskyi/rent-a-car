@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import CrossSVG from "@/assets/icons/cross.svg?react";
+import CrossSVG from '@/assets/icons/cross.svg?react';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -11,7 +11,7 @@ export const Backdrop = styled.div`
   width: 100%;
   height: 100%;
 
-  background-color: ${(p) => p.theme.colors.dark(0.5)};
+  background-color: ${p => p.theme.colors.dark(0.5)};
   overflow: auto;
 `;
 
@@ -23,10 +23,10 @@ export const Modal = styled.div`
 
   width: 541px;
   max-height: 90%;
-  padding: ${(p) => p.theme.spacing(20)};
+  padding: ${p => p.theme.spacing(20)};
 
-  background-color: ${(p) => p.theme.colors.white};
-  border-radius: ${(p) => p.theme.radii.modal};
+  background-color: ${p => p.theme.colors.white};
+  border-radius: ${p => p.theme.radii.modal};
   overflow: auto;
 
   &::-webkit-scrollbar {
@@ -41,13 +41,13 @@ export const Modal = styled.div`
 
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: ${(p) => p.theme.colors.dark(0.2)};
+    background: ${p => p.theme.colors.dark(0.2)};
   }
 
   @media screen and (max-width: 767px) {
     width: 70%;
     min-width: 320px;
-    padding: ${(p) => p.theme.spacing(14)};
+    padding: ${p => p.theme.spacing(14)};
   }
 `;
 
@@ -66,7 +66,7 @@ export const CloseBtn = styled.button`
 
   &:hover,
   &:focus {
-    color: ${(p) => p.theme.colors.hover};
+    color: ${p => p.theme.colors.hover};
   }
 
   @media screen and (max-width: 767px) {
@@ -83,7 +83,7 @@ export const CrossIcon = styled(CrossSVG)`
 
   stroke: currentColor;
 
-  transition: ${(p) => p.theme.transition("color")};
+  transition: ${p => p.theme.transition('color')};
 
   @media screen and (max-width: 767px) {
     width: 20px;

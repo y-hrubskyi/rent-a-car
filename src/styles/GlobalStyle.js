@@ -1,10 +1,10 @@
-import { createGlobalStyle } from "styled-components";
-import "modern-normalize";
+import { createGlobalStyle } from 'styled-components';
+import 'modern-normalize';
 
-import ManropeRegularWOFF2 from "@/assets/fonts/Manrope-Regular.woff2";
-import ManropeMediumWOFF2 from "@/assets/fonts/Manrope-Medium.woff2";
-import ManropeSemiBoldWOFF2 from "@/assets/fonts/Manrope-SemiBold.woff2";
-import MontserratRegularWOFF2 from "@/assets/fonts/Montserrat-Regular.woff2";
+import ManropeRegularWOFF2 from '@/assets/fonts/Manrope-Regular.woff2';
+import ManropeMediumWOFF2 from '@/assets/fonts/Manrope-Medium.woff2';
+import ManropeSemiBoldWOFF2 from '@/assets/fonts/Manrope-SemiBold.woff2';
+import MontserratRegularWOFF2 from '@/assets/fonts/Montserrat-Regular.woff2';
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {

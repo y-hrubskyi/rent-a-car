@@ -1,68 +1,68 @@
-import { theme } from "@/styles/theme";
+import { theme } from '@/styles/theme';
 
 export const selectStyles = {
   control: (baseStyles, state) => ({
     ...baseStyles,
     padding: `${theme.spacing(7)} ${theme.spacing(9)}`,
     borderRadius: theme.radii.input,
-    cursor: "pointer",
-    border: "none",
-    boxShadow: "none",
+    cursor: 'pointer',
+    border: 'none',
+    boxShadow: 'none',
     backgroundColor: theme.colors.selectBg,
-    "& .css-tj5bde-Svg": {
-      transform: state.menuIsOpen && "rotate(180deg)",
-    },
+    '& .css-tj5bde-Svg': {
+      transform: state.menuIsOpen && 'rotate(180deg)'
+    }
   }),
-  valueContainer: (baseStyles) => ({
+  valueContainer: baseStyles => ({
     ...baseStyles,
     padding: 0,
     fontSize: 18,
     fontWeight: 500,
     lineHeight: 1.11111,
-    color: theme.colors.dark(),
+    color: theme.colors.dark()
   }),
-  placeholder: (baseStyles) => ({
+  placeholder: baseStyles => ({
     ...baseStyles,
     marginLeft: 0,
     marginRight: 0,
-    color: "inherit",
+    color: 'inherit'
   }),
-  singleValue: (baseStyles) => ({
+  singleValue: baseStyles => ({
     ...baseStyles,
     marginLeft: 0,
     marginRight: 0,
-    color: "inherit",
+    color: 'inherit'
   }),
-  input: (baseStyles) => ({
+  input: baseStyles => ({
     ...baseStyles,
     margin: 0,
     paddingTop: 0,
-    paddingBottom: 0,
+    paddingBottom: 0
   }),
   indicatorSeparator: () => ({
-    display: "none",
+    display: 'none'
   }),
-  clearIndicator: (baseStyles) => ({
+  clearIndicator: baseStyles => ({
     ...baseStyles,
     padding: 0,
     color: theme.colors.grayForInputs(0.5),
-    transition: theme.transition("color"),
-    "&:hover": {
-      color: theme.colors.dark(),
-    },
+    transition: theme.transition('color'),
+    '&:hover': {
+      color: theme.colors.dark()
+    }
   }),
-  dropdownIndicator: (baseStyles) => ({
+  dropdownIndicator: baseStyles => ({
     ...baseStyles,
     padding: 0,
     color: theme.colors.dark(),
-    "&:hover": {
-      color: theme.colors.dark(),
+    '&:hover': {
+      color: theme.colors.dark()
     },
-    "& .css-tj5bde-Svg": {
-      transition: theme.transition("transform"),
-    },
+    '& .css-tj5bde-Svg': {
+      transition: theme.transition('transform')
+    }
   }),
-  menu: (baseStyles) => ({
+  menu: baseStyles => ({
     ...baseStyles,
     marginTop: theme.spacing(2),
     marginBottom: 0,
@@ -72,22 +72,22 @@ export const selectStyles = {
     zIndex: 10,
     backgroundColor: theme.colors.white,
     borderRadius: theme.radii.input,
-    boxShadow: "none",
-    border: `1px solid ${theme.colors.dark(0.05)}`,
+    boxShadow: 'none',
+    border: `1px solid ${theme.colors.dark(0.05)}`
   }),
-  menuList: (baseStyles) => ({
+  menuList: baseStyles => ({
     ...baseStyles,
-    height: "100%",
-    "&::-webkit-scrollbar": {
-      width: 8,
+    height: '100%',
+    '&::-webkit-scrollbar': {
+      width: 8
     },
-    "&::-webkit-scrollbar-track": {
-      background: "transparent",
+    '&::-webkit-scrollbar-track': {
+      background: 'transparent'
     },
-    "&::-webkit-scrollbar-thumb": {
+    '&::-webkit-scrollbar-thumb': {
       borderRadius: 10,
-      background: theme.colors.dark(0.05),
-    },
+      background: theme.colors.dark(0.05)
+    }
   }),
   option: (baseStyles, state) => ({
     ...baseStyles,
@@ -99,14 +99,14 @@ export const selectStyles = {
     fontWeight: 500,
     lineHeight: 1.25,
     color: theme.colors.dark(state.isSelected ? 1 : 0.2),
-    cursor: "pointer",
-    backgroundColor: "transparent",
-    transition: theme.transition("color"),
-    "&:hover": {
-      color: theme.colors.dark(),
+    cursor: 'pointer',
+    backgroundColor: 'transparent',
+    transition: theme.transition('color'),
+    '&:hover': {
+      color: theme.colors.dark()
     },
-    "&:active": {
-      backgroundColor: "transparent",
-    },
-  }),
+    '&:active': {
+      backgroundColor: 'transparent'
+    }
+  })
 };

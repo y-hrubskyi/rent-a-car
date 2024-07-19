@@ -1,4 +1,4 @@
-export const formatPrice = (price) => {
+export const formatPrice = price => {
   const [currencySymbol, ...amount] = price;
-  return amount.join("") + currencySymbol;
+  return amount.join('') + currencySymbol;
 };

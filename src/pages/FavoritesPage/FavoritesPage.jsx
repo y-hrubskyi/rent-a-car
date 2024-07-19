@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
-import { selectFavoritesAdverts } from "@/store/adverts/selectors";
+import { selectFavoritesAdverts } from '@/store/adverts/selectors';
 
-import { AdvertList } from "@/components/AdvertList/AdvertList";
-import { Placeholder } from "@/components/Placeholder/Placeholder";
+import { AdvertList } from '@/components/AdvertList/AdvertList';
+import { Placeholder } from '@/components/Placeholder/Placeholder';
 
 const FavoritesPage = () => {
   const data = useSelector(selectFavoritesAdverts);

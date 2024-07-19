@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { fetchAdverts } from "@/store/adverts/operations";
-import { selectError, selectIsLoading } from "@/store/adverts/selectors";
-import { filterList } from "@/utils";
+import { fetchAdverts } from '@/store/adverts/operations';
+import { selectError, selectIsLoading } from '@/store/adverts/selectors';
+import { filterList } from '@/utils';
 
-import { SearchBar } from "@/components/SearchBar/SearchBar";
-import { AdvertList } from "@/components/AdvertList/AdvertList";
-import { Placeholder } from "@/components/Placeholder/Placeholder";
-import { LoadMoreBtn } from "./CatalogPage.styled";
+import { SearchBar } from '@/components/SearchBar/SearchBar';
+import { AdvertList } from '@/components/AdvertList/AdvertList';
+import { Placeholder } from '@/components/Placeholder/Placeholder';
+import { LoadMoreBtn } from './CatalogPage.styled';
 
 const CatalogPage = () => {
   const [totalItems, setTotalItems] = useState([]);
   const [loadMore, setLoadMore] = useState(true);
   const [page, setPage] = useState(1);
-  const [make, setMake] = useState("");
+  const [make, setMake] = useState('');
   const [rentalPrice, setRentalPrice] = useState(null);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -24,12 +24,12 @@ const CatalogPage = () => {
     const getAdverts = async () => {
       try {
         const searchParams = new URLSearchParams({ page, limit: 12 });
-        if (make) searchParams.set("make", make.split("/")[0]);
+        if (make) searchParams.set('make', make.split('/')[0]);
 
         const data = await dispatch(fetchAdverts(searchParams)).unwrap();
 
         if (data.length < 12) setLoadMore(false);
-        setTotalItems((prevItems) => [...prevItems, ...data]);
+        setTotalItems(prevItems => [...prevItems, ...data]);
       } catch (error) {
         // Error handled earlier, in thunk-operation
       }
@@ -39,7 +39,7 @@ const CatalogPage = () => {
   }, [dispatch, make, page]);
 
   const handleIncrementPage = () => {
-    setPage((prevPage) => prevPage + 1);
+    setPage(prevPage => prevPage + 1);
   };
 
   const searchSubmit = ({ make, rentalPrice }) => {
@@ -59,7 +59,7 @@ const CatalogPage = () => {
       {filteredList.length > 0 && <AdvertList adverts={filteredList} />}
       {!error && loadMore && (
         <LoadMoreBtn onClick={handleIncrementPage}>
-          {isLoading ? "Loading..." : "Load more"}
+          {isLoading ? 'Loading...' : 'Load more'}
         </LoadMoreBtn>
       )}
       {noResults && (

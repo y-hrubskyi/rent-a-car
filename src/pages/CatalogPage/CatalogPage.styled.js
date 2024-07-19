@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LoadMoreBtn = styled.button`
   display: flex;
@@ -11,15 +11,15 @@ export const LoadMoreBtn = styled.button`
   font-weight: 500;
   line-height: 1.5;
   text-decoration: underline;
-  color: ${(p) => p.theme.colors.accent};
+  color: ${p => p.theme.colors.accent};
 
   background-color: transparent;
   border: none;
 
-  transition: ${(p) => p.theme.transition("color")};
+  transition: ${p => p.theme.transition('color')};
 
   &:hover,
   &:focus {
-    color: ${(p) => p.theme.colors.hover};
+    color: ${p => p.theme.colors.hover};
   }
 `;

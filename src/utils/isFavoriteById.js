@@ -1,2 +1,1 @@
-export const isFavoriteById = (list, id) =>
-  list.some((item) => item?.id === id);
+export const isFavoriteById = (list, id) => list.some(item => item?.id === id);

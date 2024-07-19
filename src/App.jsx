@@ -1,11 +1,11 @@
-import { lazy } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { lazy } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { SharedLayout } from "@/components/SharedLayout/SharedLayout";
+import { SharedLayout } from '@/components/SharedLayout/SharedLayout';
 
-const HomePage = lazy(() => import("@/pages/HomePage/HomePage"));
-const CatalogPage = lazy(() => import("@/pages/CatalogPage/CatalogPage"));
-const FavoritesPage = lazy(() => import("@/pages/FavoritesPage/FavoritesPage"));
+const HomePage = lazy(() => import('@/pages/HomePage/HomePage'));
+const CatalogPage = lazy(() => import('@/pages/CatalogPage/CatalogPage'));
+const FavoritesPage = lazy(() => import('@/pages/FavoritesPage/FavoritesPage'));
 
 export const App = () => {
   return (

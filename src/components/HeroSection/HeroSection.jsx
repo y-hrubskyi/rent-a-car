@@ -1,4 +1,4 @@
-import * as SC from "./HeroSection.styled";
+import * as SC from './HeroSection.styled';
 
 export const HeroSection = () => {
   return (
