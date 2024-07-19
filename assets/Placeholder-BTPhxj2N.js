@@ -1,4 +1,4 @@
-import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r_bYQ.js";const P=e=>e.adverts.favorites,ye=e=>e.adverts.isLoading,Ie=e=>e.adverts.error,I=e=>e.split(", ").reverse(),Y=({id:e,year:r,type:i,address:n,fuelConsumption:s,engineSize:c})=>{const[l,h]=I(n);return[h,l,`Id: ${e}`,`Year: ${r}`,`Type: ${i}`,`Fuel Consumption: ${s}`,`Engine Size: ${c}`]},Q=e=>e.toLocaleString("en-US"),R=e=>{const[r,...i]=e;return i.join("")+r},q=({mileage:e,rentalPrice:r,rentalConditions:i})=>{const n=Q(e),s=R(r),c=[`Mileage: ${n}`,`Price: ${s}`];return i.split(`
+import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BkLlAhl3.js";const P=e=>e.adverts.favorites,ye=e=>e.adverts.isLoading,Ie=e=>e.adverts.error,I=e=>e.split(", ").reverse(),Y=({id:e,year:r,type:i,address:n,fuelConsumption:s,engineSize:c})=>{const[l,h]=I(n);return[h,l,`Id: ${e}`,`Year: ${r}`,`Type: ${i}`,`Fuel Consumption: ${s}`,`Engine Size: ${c}`]},Q=e=>e.toLocaleString("en-US"),R=e=>{const[r,...i]=e;return i.join("")+r},q=({mileage:e,rentalPrice:r,rentalConditions:i})=>{const n=Q(e),s=R(r),c=[`Mileage: ${n}`,`Price: ${s}`];return i.split(`
 `).concat(c).map(l=>l.split(":"))},T=(e,r)=>[...e,...r].reduce((i,n)=>n.length<i.length?n:i,e[0]),J=(e,r)=>e.some(i=>(i==null?void 0:i.id)===r),O=()=>{const[e,r]=d.useState(!1);return d.useEffect(()=>{document.body.style.overflow=e?"hidden":"unset"},[e]),{isOpen:e,toggleModal:()=>{r(n=>!n)}}},K=e=>d.createElement("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",...e},d.createElement("path",{d:"M18 6L6 18",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"}),d.createElement("path",{d:"M6 6L18 18",strokeWidth:1.8,strokeLinecap:"round",strokeLinejoin:"round"})),W=o.div`
   position: fixed;
   top: 0;
@@ -93,7 +93,7 @@ import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r
   object-fit: cover;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -129,7 +129,7 @@ import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r
   position: relative;
 
   &:not(:last-child):after {
-    content: "";
+    content: '';
     position: absolute;
     top: 2px;
     right: -7px;
@@ -170,7 +170,7 @@ import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r
   padding: ${e=>e.theme.spacing(3.5)} ${e=>e.theme.spacing(7)};
   background-color: #f9f9f9;
 `,ce=o.span`
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
@@ -215,7 +215,7 @@ import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r
   overflow: hidden;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -255,7 +255,7 @@ import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r
   object-fit: cover;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -295,7 +295,7 @@ import{r as d,u as o,j as t,_ as N,b as B,c as E,d as F,e as S}from"./index-BC1r
   position: relative;
 
   &:not(:last-child):after {
-    content: "";
+    content: '';
     position: absolute;
     top: 2px;
     right: -7px;
