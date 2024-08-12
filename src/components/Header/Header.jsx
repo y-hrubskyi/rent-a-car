@@ -1,4 +1,4 @@
-import { Navigation } from '@/components/Navigation/Navigation';
+import { Navigation } from '~/components/Navigation/Navigation';
 import { StyledHeader } from './Header.styled';
 
 export const Header = () => {

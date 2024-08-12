@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
-import ManropeRegularWOFF2 from '@/assets/fonts/Manrope-Regular.woff2';
-import ManropeMediumWOFF2 from '@/assets/fonts/Manrope-Medium.woff2';
-import ManropeSemiBoldWOFF2 from '@/assets/fonts/Manrope-SemiBold.woff2';
-import MontserratRegularWOFF2 from '@/assets/fonts/Montserrat-Regular.woff2';
+import ManropeRegularWOFF2 from '~/assets/fonts/Manrope-Regular.woff2';
+import ManropeMediumWOFF2 from '~/assets/fonts/Manrope-Medium.woff2';
+import ManropeSemiBoldWOFF2 from '~/assets/fonts/Manrope-SemiBold.woff2';
+import MontserratRegularWOFF2 from '~/assets/fonts/Montserrat-Regular.woff2';
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -44,7 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   h1,
   h2,
   h3,
@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
   p {
     margin: 0;
   }
-  
+
   ul,
   ol {
     margin: 0;
@@ -66,7 +66,7 @@ export const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
   }
-  
+
   img {
     display: block;
     width: 100%;

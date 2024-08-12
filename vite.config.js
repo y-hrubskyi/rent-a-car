@@ -8,7 +8,7 @@ export default defineConfig({
   base: '/rent-a-car/',
   resolve: {
     alias: {
-      '@': '/src'
+      '~': '/src'
     }
   }
 });

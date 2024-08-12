@@ -1,6 +1,6 @@
-import { createConditionsDataArr, createDetailsDataArr } from '@/utils';
+import { createConditionsDataArr, createDetailsDataArr } from '~/utils';
 
-import { ModalBase } from '@/components/ModalBase/ModalBase';
+import { ModalBase } from '~/components/ModalBase/ModalBase';
 import * as SC from './AdvertModal.styled';
 
 export const AdvertModal = ({
