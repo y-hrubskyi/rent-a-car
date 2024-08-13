@@ -1,0 +1,1 @@
+import{b as r,j as e}from"./index-DWrsCKoH.js";import{b as s,P as a,A as o}from"./Placeholder-BrYlcHq7.js";const n=()=>{const t=r(s);return t.length===0?e.jsx(a,{children:"Your list of favorites is currently empty"}):e.jsx(o,{adverts:t})};export{n as default};

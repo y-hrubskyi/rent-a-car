@@ -1,4 +1,4 @@
-import{u as i,L as n,j as t}from"./index-BkLlAhl3.js";const o="/rent-a-car/assets/hero-Co8yIVSU.webp",s=i.section`
+import{u as i,L as n,j as t}from"./index-DWrsCKoH.js";const o="/rent-a-car/assets/hero-Co8yIVSU.webp",s=i.section`
   margin-bottom: ${e=>e.theme.spacing(20)};
 `,c=i.h1`
   margin-bottom: ${e=>e.theme.spacing(10)};
